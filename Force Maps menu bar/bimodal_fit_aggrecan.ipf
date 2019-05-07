@@ -187,11 +187,11 @@ second_peak = W_coef[4]
 sprintf text_string,"Peak values:\rE1 = %s\rE2 = %s",first_peak_string,second_peak_string
 TextBox/W=Resulting_Histogram/A=RT/C/N=text0 text_string
 
-// save histogram as png
+// save histogram as tiff
 
-DoAlert /T="Save histogram as png" 1,"Do you want to save the final histogram as a png-file?"
+DoAlert /T="Save histogram as tiff" 1,"Do you want to save the final histogram as a tiff-file?"
 if (V_flag == 1)
-	SavePICT/E=-5/B=288/M/W=(0,0,13.8994,7.33778)
+	SavePICT/E=-7/RES=600/M/W=(0,0,14,7.5)
 endif
 
 if (stat_chioce == 1)
