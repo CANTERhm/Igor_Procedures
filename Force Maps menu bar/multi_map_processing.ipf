@@ -71,6 +71,8 @@ else
 	AppendToTable /W=Result_Table Young_s_Modulus_ges
 endif
 
-bimodal_fit_aggrecan(ind=i)
+if (strlen(outputPaths) != 0)
+	bimodal_fit_aggrecan(ind=i)
+endif
 
 end
